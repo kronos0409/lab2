@@ -1,0 +1,67 @@
+:root {
+    --rojo-oscuro: #8B0000;
+    --rojo-acento: #D22B2B;
+    --fondo-claro: #FFF5F5;
+    --texto-principal: #333333;
+    --blanco: #FFFFFF;
+}
+
+body {
+    background-color: var(--fondo-claro);
+    color: var(--texto-principal);
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* --- Navegación --- */
+nav ul {
+    display: flex;
+    background-color: var(--rojo-oscuro);
+    margin: 0;
+    padding: 15px; 
+    list-style: none;
+    justify-content: center; /* Centra los enlaces horizontalmente */
+    gap: 30px; /* Crea un espacio uniforme entre cada enlace */
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: var(--blanco); /* El texto blanco resalta sobre el rojo oscuro */
+    font-weight: bold;
+}
+
+/* --- Cabecera --- */
+.Titulo {
+    text-align: center;
+    padding: 20px;
+    background-color: var(--rojo-acento);
+    color: var(--blanco);
+    margin-bottom: 20px;
+}
+
+/* --- Contenedor Principal y Columnas --- */
+.main-container {
+    display: flex; /* 📐 Activa Flexbox para poner elementos en fila */
+    justify-content: space-between; /* Separa los hijos a los extremos */
+    max-width: 1000px; /* Evita que el contenido se estire demasiado en pantallas grandes */
+    margin: 0 auto; /* Centra el contenedor en la pantalla */
+    padding: 0 20px;
+    gap: 30px; /* 📦 Asegura una separación de 30px entre la columna izquierda y derecha */
+}
+
+.left-container {
+    width: 30%; /* Le asigna un tercio del espacio total */
+    background-color: var(--blanco);
+    padding: 20px;
+    border-radius: 8px; /* Redondea las esquinas de la caja */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Añade una sombra sutil */
+}
+
+.right-container {
+    width: 65%; /* Le asigna el resto del espacio */
+    background-color: var(--blanco);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
