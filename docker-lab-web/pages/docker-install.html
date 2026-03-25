@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Instalación Docker – Grupo 4</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/main.css">
+  <style>
+    pre {
+      background: var(--navy-deep);
+      color: #7eb3ff;
+      padding: 1.5rem;
+      border-radius: 12px;
+      overflow-x: auto;
+      font-family: 'Space Mono', monospace;
+      font-size: 0.9rem;
+      border: 1px solid rgba(126, 179, 255, 0.2);
+      margin: 1.5rem 0;
+    }
+    .install-card {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 2.5rem;
+      margin-bottom: 2rem;
+    }
+    .step-badge {
+      background: var(--accent);
+      color: white;
+      padding: 4px 12px;
+      border-radius: 20px;
+      font-size: 0.8rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+      display: inline-block;
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <span class="nav-logo">// GRUPO_04 > DOCKER</span>
+    <ul class="nav-links">
+      <li><a href="../index.html.html">Inicio</a></li>
+      <li><a href="docker-install.html" class="active">Instalación</a></li>
+      <li><a href=docker-comands.html.html>Comandos</a></li>
+    </ul>
+  </nav>
+
+  <header class="hero" style="min-height: 45vh; padding: 4rem 2rem;">
+    <div class="hero-grid"></div>
+    <div class="hero-glow"></div>
+    <div class="hero-inner">
+      <span class="badge">Guía de Infraestructura · USS 2026</span>
+      <h1>Instalación <span class="highlight">Docker</span></h1>
+      <p class="hero-sub">Configuración paso a paso para desplegar entornos de contenedores en sistemas Linux.</p>
+    </div>
+  </header>
+
+  <main class="container" style="padding: 5rem 2rem;">
+    <p class="section-label">// procedimiento técnico</p>
+    
+    <div class="install-card">
+      <span class="step-badge">PASO 01</span>
+      <h3>Actualizar el sistema</h3>
+      <p>Sincroniza los índices de paquetes para asegurar las versiones más recientes.</p>
+      <pre>sudo apt-get update && sudo apt-get upgrade</pre>
+    </div>
+
+    <div class="install-card">
+      <span class="step-badge">PASO 02</span>
+      <h3>Instalar dependencias</h3>
+      <p>Configura las herramientas necesarias para descargar paquetes vía HTTPS.</p>
+      <pre>sudo apt-get install apt-transport-https ca-certificates curl gnupg lsb-release</pre>
+    </div>
+
+    <div class="install-card">
+      <span class="step-badge">PASO 03</span>
+      <h3>Agregar Llave GPG</h3>
+      <p>Verifica la autenticidad de las descargas con la firma oficial de Docker.</p>
+      <pre>curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg</pre>
+    </div>
+
+    <div class="install-card">
+      <span class="step-badge">PASO 04</span>
+      <h3>Instalar Docker Engine</h3>
+      <p>Descarga e instala el motor de Docker y el plugin de Compose.</p>
+      <pre>sudo apt-get update
+sudo apt-get install docker-ce docker-ce-cli containerd.io docker-compose-plugin</pre>
+    </div>
+
+    <div style="text-align: center; margin-top: 3rem;">
+      <a href="../index.html.html" class="btn btn-ghost" style="color: var(--navy-deep);">← Volver al Inicio</a>
+    </div>
+  </main>
+
+  <footer>
+    <p>Grupo 04 · Aplicaciones y Tecnologías Web · USS 2026</p>
+  </footer>
+
+</body>
+</html>

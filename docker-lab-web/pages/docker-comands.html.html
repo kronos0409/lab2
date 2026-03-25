@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Comandos Docker – Grupo 4</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/main.css">
+  <style>
+    .command-card {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 1.5rem;
+      margin-bottom: 1.5rem;
+    }
+    .code-block {
+      background: var(--navy-deep);
+      color: #7eb3ff;
+      padding: 1rem;
+      border-radius: 8px;
+      font-family: 'Space Mono', monospace;
+      margin-top: 0.5rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    h3 { color: var(--accent); font-size: 1.1rem; margin-bottom: 0.5rem; }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <span class="nav-logo">// GRUPO_04 > COMANDOS</span>
+    <ul class="nav-links">
+      <li><a href="../index.html.html">Inicio</a></li>
+      <li><a href="docker-install.html">Instalación</a></li>
+      <li><a href="docker-commands.html" class="active">Comandos</a></li>
+    </ul>
+  </nav>
+
+  <section class="container" style="padding: 5rem 2rem;">
+    <p class="section-label">// terminal y operaciones</p>
+    <h2>Comandos Especiales Docker</h2>
+    <div class="divider"></div>
+
+    <div class="command-card">
+      <h3>Ver estado de contenedores</h3>
+      <p>Muestra todos los contenedores que están corriendo actualmente.</p>
+      <div class="code-block"><code>docker ps</code></div>
+    </div>
+
+    <div class="command-card">
+      <h3>Levantar servicios (Compose)</h3>
+      <p>Crea y levanta los contenedores definidos en el archivo docker-compose.</p>
+      <div class="code-block"><code>docker-compose up -d</code></div>
+    </div>
+
+    <div class="command-card">
+      <h3>Limpiar recursos innecesarios</h3>
+      <p>Elimina contenedores, redes e imágenes que no se estén usando para liberar espacio.</p>
+      <div class="code-block"><code>docker system prune -a</code></div>
+    </div>
+
+    <div style="text-align: center; margin-top: 3rem;">
+        <a href="../index.html.html" class="btn btn-ghost" style="color: var(--navy);">← Volver al Inicio</a>
+    </div>
+  </section>
+
+  <footer>
+    <p>Grupo 04 · Aplicaciones y Tecnologías Web · USS 2026</p>
+  </footer>
+
+</body>
+</html>
